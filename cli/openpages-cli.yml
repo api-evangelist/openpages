@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+source: https://cloud.ibm.com/docs/openpages?topic=openpages-openpages_CLI
+name: IBM OpenPages CLI
+binary: ibmcloud openpages
+alias: ibmcloud op
+description: >-
+  The OpenPages command-line interface is an IBM Cloud CLI plug-in. It provides
+  capabilities for OpenPages such as importing and exporting configuration data
+  (settings, application strings, role templates, object types, views) and
+  listing OpenPages instances in an account.
+requirements:
+- IBM Cloud CLI installed
+- Java 1.8.0 (required by IBM Cloud CLI)
+- Authenticated via ibmcloud login before running openpages commands
+install:
+- method: ibmcloud plugin
+  command: ibmcloud plugin install openpages
+help_command: ibmcloud openpages help
+commands:
+- name: list
+  aliases: [ls]
+  usage: ibmcloud (openpages|op) (list|ls)
+  description: List all OpenPages instances in your IBM Cloud account.
+- name: objectmanager
+  description: >-
+    Import and export OpenPages configuration data (object types, views, and
+    other loader-file content); batch-load multiple loader files; migrate
+    configuration between instances.
+  subcommands:
+  - name: batch
+    description: Load (import) multiple loader XML files in a single session.
+  - name: create-templates
+    description: >-
+      Generate the ObjectManager.properties and
+      ObjectManagerExportFilters-Example.xml files.
+  - name: dump
+    description: Dump (export) configuration data to XML.
+  - name: load
+    description: Load (import) from a single loader XML file.
+  - name: validate
+    description: Check that a single loader file is well-formed.
+  - name: help
+    description: Get help for the objectmanager command.
+notes: >-
+  For importing and exporting instance data (as opposed to configuration data),
+  FastMap is used instead of ObjectManager.

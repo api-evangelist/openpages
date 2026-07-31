@@ -1,0 +1,60 @@
+generated: '2026-07-20'
+method: searched
+source: https://cloud.ibm.com/docs/openpages?topic=openpages-event-notifications-events
+spec_type: Webhooks
+type: Webhooks
+delivery: >-
+  OpenPages does not ship a native AsyncAPI document. Instead it forwards
+  notifications of in-app events to a connected IBM Cloud Event Notifications
+  instance, which fans them out to supported destinations (currently email;
+  other destinations such as webhooks/SMS are configured in Event Notifications).
+  Events follow the CloudEvents v1.0 specification.
+event_model: >-
+  OpenPages uses a simplified event model where all alert notifications are sent
+  using a single CloudEvents event type. Differentiation between notification
+  kinds happens at the content level inside the event payload.
+events:
+- type: com.ibm.cloud.openpages.event
+  description: Generic OpenPages event for all alert notifications.
+  spec: CloudEvents v1.0
+payload_properties:
+- name: specversion
+  type: string
+  description: CloudEvents specification version (fixed "1.0").
+- name: id
+  type: string
+  description: 'Unique event identifier: <CRN><jobId.hashCode()>.'
+- name: source
+  type: string
+  description: Event source identifier (always "openpages").
+- name: type
+  type: string
+  description: Event type (always "com.ibm.cloud.openpages.event").
+- name: ibmensourceid
+  type: string
+  description: IBM Event Notifications source ID (CRN of the OpenPages instance).
+- name: ibmendefaultshort
+  type: string
+  description: Short notification message (truncated email body, max 1000 chars).
+- name: ibmendefaultlong
+  type: string
+  description: Long notification message (truncated email body, max 3000 chars).
+- name: message_subject
+  type: string
+  description: Email subject line.
+- name: message_html_body
+  type: string
+  description: Complete HTML-formatted email body.
+- name: ibmenmailto
+  type: array
+  description: JSON array of recipient email addresses.
+routing:
+  note: >-
+    Each OpenPages instance forwards to a single Event Notifications instance in
+    the same account; one Event Notifications instance can receive from many
+    OpenPages instances. Supported EN regions depend on the OpenPages instance
+    region.
+audit_events:
+  standard: CADF (Cloud Auditing Data Federation)
+  via: IBM Cloud Logs (Activity Tracker events)
+  docs: https://cloud.ibm.com/docs/openpages?topic=openpages-at_events

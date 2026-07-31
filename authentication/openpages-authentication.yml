@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://cloud.ibm.com/docs/openpages?topic=openpages-iam-openpages
+docs: https://cloud.ibm.com/docs/openpages?topic=openpages-iam-openpages
+summary:
+  types: [oauth2, http]
+  model: IBM Cloud Identity and Access Management (IAM)
+  token_type: IAM bearer access token
+  api_key_in: []
+  oauth2_flows: []
+notes: >-
+  Access to OpenPages service instances is controlled by IBM Cloud Identity and
+  Access Management (IAM); further, finer-grained access is managed within the
+  OpenPages application itself. Calls to the OpenPages REST API require the
+  caller to hold the OpenPages "User" service access role (crn service role
+  GRCUser) and to present an IAM bearer access token. IAM API keys are exchanged
+  for bearer tokens at the IBM Cloud IAM token endpoint. Users and groups are
+  synchronized from IBM Cloud IAM into OpenPages; identities can be federated.
+schemes:
+- name: iam-bearer
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: >-
+    IBM Cloud IAM access token presented as Authorization: Bearer <token>.
+    Tokens are obtained by exchanging an IBM Cloud IAM API key at the IAM token
+    service.
+  token_endpoint: https://iam.cloud.ibm.com/identity/token
+  sources: ['https://cloud.ibm.com/docs/openpages?topic=openpages-iam-openpages']
+roles:
+- name: OpenPages User
+  crn: crn:v1:bluemix:public:openpages::::serviceRole:GRCUser
+  grants: Log in to OpenPages and make calls to the OpenPages REST API.
+- name: Viewer
+  crn: crn:v1:bluemix:public:openpages::::serviceRole:Viewer
+- name: Operator
+  crn: crn:v1:bluemix:public:openpages::::serviceRole:Operator
+- name: Editor
+  crn: crn:v1:bluemix:public:openpages::::serviceRole:Editor
+- name: Administrator
+  crn: crn:v1:bluemix:public:openpages::::serviceRole:Administrator
+network_controls:
+  ip_allowlisting: >-
+    Optional per-instance IP allowlisting (IPv4/IPv6 addresses or CIDR ranges)
+    restricts which clients can log in and access the API. By default all IP
+    addresses are allowed.

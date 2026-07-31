@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://cloud.ibm.com/docs/openpages?topic=openpages-openpages-relnotes
+versioning:
+  api_scheme: uri-path
+  api_versions: [v1, v2]
+  product_version: 9.2.1
+  release_notes: https://cloud.ibm.com/docs/openpages?topic=openpages-openpages-relnotes
+  cadence: >-
+    Frequent dated releases (roughly monthly maintenance plus periodic feature
+    releases) rolled out region-by-region across AWS and IBM Cloud.
+status_page: https://cloud.ibm.com/status
+support:
+  help: https://cloud.ibm.com/docs/openpages?topic=openpages-help-and-support
+  cases: https://cloud.ibm.com/docs/account?topic=account-open-case
+maintenance:
+  windows_docs: https://cloud.ibm.com/docs/openpages?topic=openpages-maintenance_windows
+  software_updates_docs: https://cloud.ibm.com/docs/openpages?topic=openpages-software_updates
+availability:
+  ha_docs: https://cloud.ibm.com/docs/openpages?topic=openpages-ha
+  bc_dr_docs: https://cloud.ibm.com/docs/openpages?topic=openpages-bc-dr
+regions:
+- AWS US East (us-east-1)
+- AWS Europe (eu-central-1)
+- IBM Cloud Asia Pacific (Sydney)
+- IBM Cloud Dallas (us-south)
+- IBM Cloud Frankfurt (eu-de)
+deprecation:
+  policy_url: null
+  note: >-
+    No standalone public deprecation/sunset policy was located for the OpenPages
+    as a Service REST API; deprecations are communicated via release notes and
+    per-version fix lists / New Features guides.
+deprecated_operations: []

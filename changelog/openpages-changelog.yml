@@ -1,0 +1,62 @@
+generated: '2026-07-20'
+method: searched
+source: https://cloud.ibm.com/docs/openpages?topic=openpages-openpages-relnotes
+scheme: semver
+current_version: 9.2.1
+notes: >-
+  IBM OpenPages as a Service publishes dated release notes grouped by date, with
+  the product version and the deployment regions each release reached. Detailed
+  fix lists are maintained separately per major line (9.1 / 9.2 fix lists).
+regions:
+- AWS US East (us-east-1)
+- AWS Europe (eu-central-1)
+- IBM Cloud Asia Pacific (Sydney)
+- IBM Cloud Dallas (us-south)
+- IBM Cloud Frankfurt (eu-de)
+entries:
+- version: 9.2.1
+  date: '2026-06-26'
+  type: maintenance
+  highlights: Bug fixes and security fixes applied.
+  fix_list: https://www.ibm.com/support/pages/ibm-openpages-92-fix-list
+- version: 9.2.0.1
+  date: '2026-04-27'
+  type: maintenance
+  highlights: Bug fixes and security fixes applied.
+  fix_list: https://www.ibm.com/support/pages/ibm-openpages-92-fix-list
+- version: '9.2'
+  date: '2026-03-23'
+  type: feature
+  breaking: false
+  highlights: >-
+    Infrastructure updates: AWS RDS Db2 engine version upgraded; ROSA and ROKS
+    cluster versions upgraded for improved performance and security. Bug fixes
+    and security fixes applied.
+  fix_list: https://www.ibm.com/support/pages/ibm-openpages-92-fix-list
+- version: 9.1.3.2
+  date: '2026-02-23'
+  type: maintenance
+  highlights: Bug fixes and security fixes applied.
+  fix_list: https://www.ibm.com/support/pages/ibm-openpages-91-fix-list
+- version: 9.1.3.1
+  date: '2026-01-26'
+  type: maintenance
+  highlights: Bug fixes and security fixes applied.
+  fix_list: https://www.ibm.com/support/pages/ibm-openpages-91-fix-list
+- version: 9.1.3
+  date: '2025-12-09'
+  type: feature
+  breaking: false
+  highlights: New features release; see New Features Guide for version 9.1.3.
+  fix_list: https://www.ibm.com/support/pages/ibm-openpages-91-fix-list#91MOD3
+- version: 9.1.2.1
+  date: '2025-10-27'
+  type: maintenance
+  highlights: Bug fixes and security fixes applied.
+  fix_list: https://www.ibm.com/support/pages/ibm-openpages-91-fix-list
+- version: 9.1.2
+  date: '2025-09-22'
+  type: feature
+  breaking: false
+  highlights: Release rolled out across AWS and IBM Cloud regions.
+  fix_list: https://www.ibm.com/support/pages/ibm-openpages-91-fix-list

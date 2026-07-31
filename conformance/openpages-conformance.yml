@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://cloud.ibm.com/docs/openpages
+standards:
+- id: cloudevents-1.0
+  conforms: true
+  evidence: >-
+    Event notifications are emitted following the CloudEvents v1.0 specification
+    (specversion "1.0"), documented in the OpenPages event notifications guide.
+  source: https://cloud.ibm.com/docs/openpages?topic=openpages-event-notifications-events
+- id: cadf
+  conforms: true
+  evidence: >-
+    Auditing events collected via IBM Cloud Logs comply with the Cloud Auditing
+    Data Federation (CADF) standard.
+  source: https://cloud.ibm.com/docs/openpages?topic=openpages-at_events
+- id: oauth2
+  conforms: true
+  evidence: >-
+    API access is authenticated with IBM Cloud IAM bearer (OAuth2-style) access
+    tokens obtained from the IAM token service.
+  source: https://cloud.ibm.com/docs/openpages?topic=openpages-iam-openpages
+- id: rest
+  conforms: true
+  evidence: >-
+    OpenPages exposes a data-centric REST API (v1 and v2) specified in terms of
+    resources, URIs, and actions on those URIs.
+  source: https://www.ibm.com/docs/en/openpages/9.2.0?topic=guide-rest-api-v2
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public OpenAPI or documented application/problem+json error contract located.
+- id: fhir-r4
+  conforms: false
+- id: scim2
+  conforms: false
+notes: >-
+  IBM OpenPages is a governance, risk, and compliance (GRC) product; it is used
+  to manage regulatory compliance rather than being defined by a single API
+  certification. No published API-level compliance certification page (e.g. SOC
+  2 / ISO 27001 specific to the OpenPages API surface) was captured in this pass,
+  so no Compliance pointer is asserted.

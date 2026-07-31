@@ -1,24 +1,117 @@
 aid: openpages
 name: OpenPages
-description: 'OpenPages is a company surfaced as a portfolio company of matrix-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: b2b. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  IBM OpenPages is an AI-driven, unified governance, risk, and compliance (GRC)
+  platform delivered as a managed service on IBM Cloud. Originally founded as
+  OpenPages Inc. (a Matrix Partners portfolio company) and acquired by IBM in
+  2010, it consolidates operational risk, regulatory compliance, financial
+  controls, policy, IT governance, third-party risk, and model/AI governance
+  (watsonx.governance) into one system of record. OpenPages exposes a data-centric
+  GRC REST API (v1 and v2), an ObjectManager CLI (ibmcloud openpages), IBM Cloud
+  IAM authentication, and event notifications (CloudEvents v1.0) so teams can
+  automate configuration, integrate risk data, and drive event-driven workflows.
 url: https://raw.githubusercontent.com/api-evangelist/openpages/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openpages.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - matrix-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-lineage: OpenPages Inc. (Matrix Partners portfolio) -> acquired by IBM 2010 -> IBM OpenPages as a Service
+x-tier: profiled
+x-tier-reason: enriched-from-ibm-cloud-docs
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - B2B
-apis: []
+- Governance
+- Risk
+- Compliance
+- GRC
+- Regulatory Compliance
+- Risk Management
+- Enterprise Software
+- watsonx
+- Audit
+apis:
+- name: IBM OpenPages GRC REST API
+  description: >-
+    Data-centric GRC REST API for IBM OpenPages, specified in terms of resources,
+    their URIs, and the actions that can be performed on those URIs. Available as
+    v1 and v2. The API is hosted per service instance (the instance Fixed URL or
+    a custom hostname), authenticated with IBM Cloud IAM, and reachable only from
+    allow-listed IP addresses when IP allowlisting is enabled.
+  humanURL: https://www.ibm.com/docs/en/openpages/9.2.0?topic=guide-rest-api-v2
+  properties:
+  - type: APIReference
+    url: https://cloud.ibm.com/apidocs/openpages
+  - type: Documentation
+    url: https://www.ibm.com/docs/en/openpages/9.2.0?topic=developer-guide
+common:
+- type: VulnerabilityDisclosure
+  url: security/openpages-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.ibm.com/trust/security-psirt
+- type: DeveloperPortal
+  url: https://cloud.ibm.com/docs/openpages
+- type: Documentation
+  url: https://cloud.ibm.com/docs/openpages
+- type: APIReference
+  url: https://cloud.ibm.com/apidocs/openpages
+- type: GettingStarted
+  url: https://cloud.ibm.com/docs/openpages?topic=openpages-gettingstartedtutorial
+- type: Website
+  url: https://www.ibm.com/products/openpages
+- type: Pricing
+  url: https://cloud.ibm.com/docs/openpages?topic=openpages-openpages-choose-plan
+- type: SignUp
+  url: https://cloud.ibm.com/registration
+- type: Login
+  url: https://cloud.ibm.com/login
+- type: Support
+  url: https://cloud.ibm.com/docs/openpages?topic=openpages-help-and-support
+- type: TermsOfService
+  url: https://www.ibm.com/legal
+- type: PrivacyPolicy
+  url: https://www.ibm.com/privacy
+- type: StatusPage
+  url: https://cloud.ibm.com/status
+- type: ChangeLog
+  url: https://cloud.ibm.com/docs/openpages?topic=openpages-openpages-relnotes
+- type: ChangeLog
+  url: changelog/openpages-changelog.yml
+- type: CLI
+  url: cli/openpages-cli.yml
+- type: Authentication
+  url: authentication/openpages-authentication.yml
+- type: Webhooks
+  url: asyncapi/openpages-events-webhooks.yml
+- type: Lifecycle
+  url: lifecycle/openpages-lifecycle.yml
+- type: Conformance
+  url: conformance/openpages-conformance.yml
+- type: DomainSecurity
+  url: security/openpages-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1
