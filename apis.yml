@@ -1,15 +1,12 @@
 aid: openpages
 name: OpenPages
-description: >-
-  IBM OpenPages is an AI-driven, unified governance, risk, and compliance (GRC)
-  platform delivered as a managed service on IBM Cloud. Originally founded as
-  OpenPages Inc. (a Matrix Partners portfolio company) and acquired by IBM in
-  2010, it consolidates operational risk, regulatory compliance, financial
-  controls, policy, IT governance, third-party risk, and model/AI governance
-  (watsonx.governance) into one system of record. OpenPages exposes a data-centric
-  GRC REST API (v1 and v2), an ObjectManager CLI (ibmcloud openpages), IBM Cloud
-  IAM authentication, and event notifications (CloudEvents v1.0) so teams can
-  automate configuration, integrate risk data, and drive event-driven workflows.
+description: IBM OpenPages is an AI-driven, unified governance, risk, and compliance (GRC) platform delivered as
+  a managed service on IBM Cloud. Originally founded as OpenPages Inc. (a Matrix Partners portfolio company) and
+  acquired by IBM in 2010, it consolidates operational risk, regulatory compliance, financial controls, policy,
+  IT governance, third-party risk, and model/AI governance (watsonx.governance) into one system of record. OpenPages
+  exposes a data-centric GRC REST API (v1 and v2), an ObjectManager CLI (ibmcloud openpages), IBM Cloud IAM authentication,
+  and event notifications (CloudEvents v1.0) so teams can automate configuration, integrate risk data, and drive
+  event-driven workflows.
 url: https://raw.githubusercontent.com/api-evangelist/openpages/refs/heads/main/apis.yml
 accessModel:
   pricing: unknown
@@ -33,7 +30,7 @@ x-tier: profiled
 x-tier-reason: enriched-from-ibm-cloud-docs
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-21'
 tags:
 - Company
 - B2B
@@ -60,12 +57,10 @@ tags_raw:
 - Audit
 apis:
 - name: IBM OpenPages GRC REST API
-  description: >-
-    Data-centric GRC REST API for IBM OpenPages, specified in terms of resources,
-    their URIs, and the actions that can be performed on those URIs. Available as
-    v1 and v2. The API is hosted per service instance (the instance Fixed URL or
-    a custom hostname), authenticated with IBM Cloud IAM, and reachable only from
-    allow-listed IP addresses when IP allowlisting is enabled.
+  description: Data-centric GRC REST API for IBM OpenPages, specified in terms of resources, their URIs, and the
+    actions that can be performed on those URIs. Available as v1 and v2. The API is hosted per service instance
+    (the instance Fixed URL or a custom hostname), authenticated with IBM Cloud IAM, and reachable only from allow-listed
+    IP addresses when IP allowlisting is enabled.
   humanURL: https://www.ibm.com/docs/en/openpages/9.2.0?topic=guide-rest-api-v2
   properties:
   - type: APIReference
@@ -73,6 +68,11 @@ apis:
   - type: Documentation
     url: https://www.ibm.com/docs/en/openpages/9.2.0?topic=developer-guide
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/ibm/
+  name: Ibm
+  x-relationship: acquisition
+  x-generated-by: ibm-family:2026-08-21
 - type: VulnerabilityDisclosure
   url: security/openpages-vulnerability-disclosure.yml
 - type: Security
@@ -127,3 +127,5 @@ x-enrichment:
   status: enriched
   artifacts_added: 8
   pass: local-v1
+x-parent: ibm
+x-relationship: acquisition
